@@ -1,0 +1,9 @@
+{
+  "description": "Simulate network isolation of region",
+  "actions": {
+    "isolate": {
+      "actionId": "aws:fis:network-blackhole",
+      "parameters": { "scope": "REGION" }
+    }
+  }
+}
