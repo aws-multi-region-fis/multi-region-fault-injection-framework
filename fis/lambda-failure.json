@@ -1,0 +1,15 @@
+{
+  "description": "Simulate Lambda failure in primary region",
+  "targets": {
+    "Lambda": {
+      "resourceType": "aws:lambda:function",
+      "resourceArns": ["${lambda_arn}"]
+    }
+  },
+  "actions": {
+    "failLambda": {
+      "actionId": "aws:lambda:delete-function",
+      "targets": { "Function": "Lambda" }
+    }
+  }
+}
