@@ -1,0 +1,9 @@
+{
+  "description": "Add 6s latency to API",
+  "actions": {
+    "latency": {
+      "actionId": "aws:fis:inject-api-latency",
+      "parameters": { "duration": "6000" }
+    }
+  }
+}
