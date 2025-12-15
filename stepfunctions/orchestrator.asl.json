@@ -1,0 +1,26 @@
+{
+  "Comment": "Multi-region chaos test orchestrator",
+  "StartAt": "BaselineHealth",
+  "States": {
+    "BaselineHealth": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:::function:checkHealth",
+      "Next": "StartFIS"
+    },
+    "StartFIS": {
+      "Type": "Task",
+      "Resource": "arn:aws:fis:::startExperiment",
+      "Next": "Wait"
+    },
+    "Wait": {
+      "Type": "Wait",
+      "Seconds": 60,
+      "Next": "ValidateFailover"
+    },
+    "ValidateFailover": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:::function:validateFailover",
+      "End": true
+    }
+  }
+}
