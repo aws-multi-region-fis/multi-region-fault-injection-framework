@@ -1,0 +1,9 @@
+{
+  "widgets": [
+    { "type": "metric", "properties": { "metrics": [
+      ["AWS/Route53", "HealthCheckStatus"],
+      ["AWS/Lambda", "Errors"],
+      ["AWS/ApiGateway", "Latency"]
+    ]}}
+  ]
+}
