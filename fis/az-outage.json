@@ -1,0 +1,9 @@
+{
+  "description": "Simulate AZ outage",
+  "targets": {
+    "az": {
+      "resourceType": "aws:ec2:availability-zone",
+      "parameters": { "availabilityZones": ["us-east-1a"] }
+    }
+  }
+}
